@@ -1,0 +1,29 @@
+<div class="header" *ngIf="onDisplayHeader()">
+    <a class="logo">Company Logo</a>
+    <div class="header-p">
+        <a routerLink='/home' routerLinkActive="active">Home</a>
+        <a routerLink='/menu' routerLinkActive="active">Menu</a>
+        <a routerLink='/events' routerLinkActive="active">Events</a>
+        <a>FeedBack</a>
+        <div id="header-lr" *ngIf="!Logged()">
+            <a routerLink='/register' routerLinkActive="active">Register</a>
+            <a routerLink='/login' routerLinkActive="active">Login</a>
+        </div>
+        <div id="header-lg" *ngIf="Logged()">
+            <img src="assets/enveloper.png" class="imageEnveloper">
+            <img src="assets/notification.png" class="imageNotification">
+            <img src="assets/user.png" class="imageUser">
+            <a id="username" (click)="Profile()">{{name}}</a>
+            <img src="assets/next1.png" class="arrowIcon" id="arrowicon">
+            <div class="boxLog" id="boxLog">
+                <a>User Profile</a>
+                <a>Help</a>
+                <a (click)="Logout()" id="btnLogout">Logout</a>
+            </div>
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
+
+<!-- not fineshed-->
+<!-- <app-profile-card></app-profile-card> -->

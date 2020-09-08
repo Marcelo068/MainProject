@@ -1,0 +1,130 @@
+.container {
+    background-image: url('/assets/wpe.jpeg');
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 625px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.title h1 {
+    margin: 0;
+    font-size: 55px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.date p {
+    font-size: 18px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #ff8800;
+    margin: 16px 0 0 0;
+}
+
+.adress p {
+    margin: 15px 0 0 0;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.time {
+    display: flex;
+    text-align: center;
+}
+
+.time div {
+    margin: 4px;
+}
+
+.time p {
+    font-size: 12px;
+    text-transform: uppercase;
+    padding: 8px;
+    font-weight: 600;
+}
+
+.time span {
+    background-color: #ff8800;
+    padding: 12px 24px;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 20px;
+    color: white;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 100px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    width: 420px;
+    text-align: justify;
+}
+
+.text-container h1 {
+    font-size: 34px;
+    letter-spacing: 2px;
+    margin: 90px 0 0 0;
+    line-height: 70px;
+    font-weight: 600;
+}
+
+.title-txt::after {
+    content: '';
+    display: block;
+    border-bottom: 4px solid #ff8800;
+    border-radius: 1px;
+    width: 25%;
+}
+
+.text-container p {
+    margin: 35px 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.text-container a {
+    border: 1px solid #ff8800;
+    background: #ff8800;
+    padding: 12px 28px;
+    border-radius: 3px;
+    margin: 40px 26px 0 0;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.text-container a:hover {
+    opacity: 0.8;
+}
+
+.img-container {
+    width: 420px;
+    height: 400px;
+}
+
+.img {
+    background-image: url('/assets/wpce.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    width: 490px;
+    box-shadow: -30px 30px 4px rgba(0, 0, 0, 0.12);
+    margin-top: 50px;
+}
+
+.main-container .text-container,
+.img-container {
+    margin: 0 35px;
+}

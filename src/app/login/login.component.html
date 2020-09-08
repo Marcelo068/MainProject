@@ -1,0 +1,37 @@
+<form [formGroup]="form">
+    <!-- after we wil use ngclass(i'm read this again. and nothing remember what i'm want say xD) -->
+    <div class="img">
+        <div class="container">
+            <div class="title">
+                <h1>Login</h1>
+            </div>
+            <div class="form">
+                <input type="email" name="email" formControlName="email" required>
+                <label for="email" class="label-name">
+                <span class="content-name">Login</span>
+            </label>
+            </div>
+            <div class="form">
+                <input type="password" name="password" formControlName="password" (keyup.enter)="onLogin()" required>
+                <label for="password" class="label-name">
+                <span class="content-name">Password</span>
+            </label>
+            </div>
+            <div class="forgot">
+                <a>Forgot password?</a>
+            </div>
+
+            <div class="cont-btn">
+                <a (click)="onLogin()">Login</a>
+            </div>
+            <div class="cont-sign">
+                <p>Don't have an account?</p>
+                <a routerLink='/register'>Sign up!</a >
+            </div>
+        </div>
+    </div>
+</form>
+<!-- <div class="home">
+</div> -->
+<div class="warning" id="warning" (mouseover)="timeWarning()"><p>Incorrect username or password</p></div>
+<div class="all"></div>

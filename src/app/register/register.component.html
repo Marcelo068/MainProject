@@ -1,0 +1,47 @@
+<form [formGroup]="form">
+    <div class="img-r">
+        <div class="container">
+            <div class="img-c">
+                <div class="text">
+                    <h1>Greetings & Welcome</h1>
+                    <p>Are you already to eat?</p>
+                </div>
+            </div>
+            <div class="forms">
+                <div class="title">
+                    <h1>Register</h1>
+                </div>
+                <div class="form">
+                    <input type="text" name="username" formControlName="username" required>
+                    <label for="username" class="label-name">
+                    <span class="content-name">Username</span>
+                </label>
+                </div>
+                <div class="form">
+                    <input type="email" name="email" formControlName="email" required>
+                    <label for="email " class="label-name ">
+                    <span class="content-name ">Email</span>
+                </label>
+                </div>
+                <div class="form ">
+                    <input type="password" name="password" formControlName="password" required>
+                    <label for="password" class="label-name">
+                    <span class="content-name">Password</span>
+                </label>
+                </div>
+                <div class="form ">
+                    <input type="password" name="confirmPassword" formControlName="confirmPassword" (keyup.enter)="onRegister()" required>
+                    <label for="confirmPassword" class="label-name">
+                    <span class="content-name">Confirm Password</span>
+                </label>
+                </div>
+                <div class="register ">
+                    <a class="btn-1 " (click)="onRegister()">Register</a  >
+                <a class="btn-2 " routerLink='/login'>I am already a member</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+<div class="all "></div>

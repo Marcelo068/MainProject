@@ -1,0 +1,108 @@
+<div class="p-img">
+    <div class="container">
+        <h1>Find a Dish</h1>
+        <form [formGroup]="form">
+            <div class="search">
+                <img src="{{icondiretory}}" class="icon">
+                <input type="text" class="search-txt" (focus)="onMouseSearch()" (blur)=" onMouseSearchOut()" (keyup.enter)="searchFood()" formControlName="search">
+            </div>
+        </form>
+    </div>
+</div>
+
+<app-advertising></app-advertising>
+
+<div class="suggestions">
+    <div>
+        <h1>Most Famous Dishes</h1>
+        <div class="dishes">
+            <div class="underline" (click)="seeFood('cfood6')">
+                <div class="circle">
+                    <img *ngIf="this.famousDishes[6]?.images" src="/assets/foods/{{this.famousDishes[6]?.images}}">
+                </div>
+                <p>{{this.famousDishes[6]?.name}}</p>
+            </div>
+            <div class="underline" (click)="seeFood('cfood0')">
+                <div class="circle">
+                    <img *ngIf="this.famousDishes[0]?.images" src="/assets/foods/{{this.famousDishes[0]?.images}}">
+                </div>
+                <p>{{this.famousDishes[0]?.name}}</p>
+            </div>
+            <div class="underline" (click)="seeFood('cfood3')">
+                <div class="circle">
+                    <img *ngIf="this.famousDishes[3]?.images" src="/assets/foods/{{this.famousDishes[3]?.images}}">
+                </div>
+                <p>{{this.famousDishes[3]?.name}}</p>
+            </div>
+            <div class="underline" (click)="seeFood('cdessert0')">
+                <div class="circle">
+                    <img *ngIf="this.famousDesserts[0]?.images" src="/assets/desserts/{{this.famousDesserts[0]?.images}}">
+                </div>
+                <p>{{this.famousDesserts[0]?.name}}</p>
+            </div>
+            <div class="underline" (click)="seeFood('cdessert0')">
+                <div class="circle">
+                    <img *ngIf="this.famousDesserts[1]?.images" src="/assets/desserts/{{this.famousDesserts[1]?.images}}">
+                </div>
+                <p>{{this.famousDesserts[1]?.name}}</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="events">
+    <div class="container2">
+        <h2>Events</h2>
+        <p>Promotions, exclusive foods, singers and more.</p>
+        <a>Learn More</a>
+    </div>
+</div>
+
+<div class="map">
+    <div class="sign">
+        <h1>Sign up for our<br> email news and specials</h1>
+        <p>Get the latest restaurant news and<br> specials delivered to your email inbox</p>
+        <a routerLink='/register'>Sign Up!</a>
+    </div>
+    <div class="fields">
+        <h1>Links</h1>
+        <a class="underline">
+            <p>Menu</p>
+        </a>
+        <a class="underline">
+            <p>Restaurants</p>
+        </a>
+        <a class="underline">
+            <p>Events</p>
+        </a>
+        <a class="underline">
+            <p>FeedBack</p>
+        </a>
+        <a class="underline">
+            <p>Locations</p>
+        </a>
+    </div>
+    <div class="fields space">
+        <a class="underline">
+            <p>Blog</p>
+        </a>
+        <a class="underline">
+            <p>About Us</p>
+        </a>
+        <a class="underline">
+            <p>FAQ</p>
+        </a>
+        <a class="underline">
+            <p>Contact</p>
+        </a>
+    </div>
+    <div class="contactUs" id="testtest">
+        <h1>Contact Us</h1>
+        <p>Your Email Adress</p>
+        <input type="text">
+        <p>Your Message</p>
+        <textarea rows="3"></textarea><br>
+    </div>
+</div>
+
+<app-footer></app-footer>

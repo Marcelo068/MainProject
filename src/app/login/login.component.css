@@ -1,0 +1,191 @@
+.img {
+    background-image: url('/assets/wpl.jpeg');
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    height: 657px;
+    text-align: center;
+    position: relative;
+}
+
+.container {
+    z-index: 1;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    font-family: 'Raleway', sans-serif;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+.container h1 {
+    font-weight: bold;
+}
+
+.container h1::after {
+    content: '';
+    display: block;
+    border-bottom: 4px solid #ff8800;
+    width: 66%;
+    left: 0;
+}
+
+.form {
+    width: 70%;
+    position: relative;
+    height: 50px;
+    margin: 4px;
+    overflow: hidden;
+}
+
+.form input {
+    border: none;
+    width: 100%;
+    height: 100%;
+    padding-top: 20px;
+    outline: none;
+    color: #595f6e;
+}
+
+.form label {
+    position: absolute;
+    left: 0%;
+    bottom: 0%;
+    width: 100%;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.8);
+    pointer-events: none;
+}
+
+.form label::after {
+    content: '';
+    position: absolute;
+    left: 0px;
+    width: 100%;
+    bottom: -1px;
+    border-bottom: 2px solid #ff8800;
+    transform: translateX(-100%);
+    transition: all 0.3s ease;
+}
+
+.content-name {
+    position: absolute;
+    bottom: 5px;
+    left: 0px;
+    transition: all 0.3s ease;
+}
+
+.form input:focus+.label-name .content-name,
+.form input:valid+.label-name .content-name {
+    transform: translateY(-150%);
+    font-size: 14px;
+}
+
+.form input:focus+label::after,
+.form input:valid+label::after {
+    transform: translateX(0%);
+}
+
+.forgot {
+    width: 70%;
+    text-align: right;
+    margin-top: 4px;
+}
+
+.forgot a {
+    font-size: 12px;
+    align-self: flex-end;
+}
+
+.cont-btn {
+    margin: 50px 0;
+}
+
+.cont-btn a {
+    border: 1px solid #ff8800;
+    background: #ff8800;
+    /* background-image: linear-gradient(to top right, #FF512F, #F09819); */
+    border-radius: 30px;
+    padding: 12px 108px;
+    font-weight: 600;
+}
+
+.cont-btn a:hover,
+.forgot a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.cont-sign p {
+    margin: 40px 0 0 0;
+    font-size: 12px;
+}
+
+.cont-sign a {
+    text-transform: uppercase;
+    font-size: 12px;
+    color: #ff8800;
+    margin: 0;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.cont-sign a:hover {
+    opacity: 0.8;
+}
+
+
+/* arrow for return to home, but i do no if i will put in the website */
+
+.home {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    border: 2px solid black;
+    border-radius: 50%;
+    bottom: 10px;
+    right: 30px;
+    background-image: url('/assets/iconarrow.png');
+    background-position: center;
+    background-size: cover;
+    z-index: 1;
+}
+
+
+/* other div for all content  */
+
+.all {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.warning {
+    background-color: rgba(254, 26, 0, .9);
+    border-radius: 6px;
+    position: fixed;
+    bottom: 10px;
+    right: -271px;
+    z-index: 1;
+    padding: 5px 70px 5px 15px;
+    transition: all 500ms cubic-bezier(0.175, 0.885, 0.320, 1.275);
+    opacity: 0;
+}
+
+.warning p {
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, .5);
+    font-weight: bold;
+    font-size: 14px;
+    box-sizing: border-box;
+}

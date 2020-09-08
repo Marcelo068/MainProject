@@ -1,0 +1,120 @@
+<div>
+    <div class="bg">
+        <div class="caption">
+            <span>Menu</span>
+        </div>
+    </div>
+    <div class="typeFood">
+        <div class="line">
+            <div>
+                <img src="assets/icon/iconfood.png">
+            </div>
+            <div>
+                <h1>Foods</h1>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box" *ngFor="let food of foods let i = index" id="cfood{{i}}">
+            <img src="/assets/foods/{{food.images}}">
+            <div class="space">
+                <h1>{{food.name}}</h1>
+                <p>{{food.description}}.</p>
+                <div class="down">
+                    <p id="price">${{food.price}}</p>
+                    <!-- [ngClass]="{btn: Logged(),testing: !Logged()}"  code for change de button-->
+                    <a (click)="addCart(food,'foods')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="typeFood">
+        <div class="line">
+            <div>
+                <img src="assets/icon/icondrink.png">
+            </div>
+            <div>
+                <h1 id="drinks">Drinks</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box" *ngFor="let drink of drinks let i = index" id="cdrink{{i}}">
+            <img src="/assets/drinks/{{drink.images}}">
+            <div class="space">
+                <h1>{{drink.name}}</h1>
+                <p>{{drink.description}}.</p>
+                <div class="down">
+                    <p id="price">${{drink.price}}</p>
+                    <a (click)="addCart(drink,'drinks')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="typeFood">
+        <div class="line">
+            <div>
+                <img src="assets/icon/icondessert.png">
+            </div>
+            <div>
+                <h1>Desserts</h1>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box" *ngFor="let dessert of desserts let i = index" id="cdessert{{i}}">
+            <img src="/assets/desserts/{{dessert.images}}">
+            <div class="space">
+                <h1>{{dessert.name}}</h1>
+                <p>{{dessert.description}}.</p>
+                <div class="down">
+                    <p id="price">${{dessert.price}}</p>
+                    <a (click)="addCart(dessert,'desserts')" class="btn">Add to Cart</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="something"></div>
+
+    <app-footer></app-footer>
+
+    <div class="allcontent" id="allcontent">
+        <div class="selects" (click)="onOpen()">
+            <div>
+                <img src="assets/icon/iconcart.png">
+                <p class="nb">{{contCart}}</p>
+                <p>Total: <span>${{valueForPay}}</span></p>
+            </div>
+        </div>
+
+        <div class="body">
+            <div class="list" *ngFor="let product of products; let i = index" id="{{i}}" (mouseover)="onMouse(i)" (mouseout)="onMouseOut(i)">
+                <div class="number">
+                    <p id="number{{i}}">{{this.products[i].countAmount}}</p>
+                </div>
+                <div>
+                    <h1>{{this.products[i].food['name']}}</h1>
+                </div>
+                <div class="position">
+                    <div class="price">
+                        <p>${{this.products[i].food['price']}}</p>
+                    </div>
+                    <div>
+                        <img src="assets/icon/iconclose.png" (click)="removeCart(product,i)">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="checkout">
+            <div>
+                <a>Checkout</a>
+            </div>
+        </div>
+    </div>
+
+    <div [ngClass]="{all: v}">
+    </div>
+
+</div>
